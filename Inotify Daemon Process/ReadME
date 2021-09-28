@@ -1,0 +1,28 @@
+How to run the Inotify Daemon Process program in a Unix environment.
+
+Requirements: TCLAP and RudeConfig installed. 
+Reminder: Must edit the Watchdir variable in the CONF file to specify the watch folder.
+
+Issue the following commands
+1. make 
+2. ./Prog5 -d <config file name>
+
+Expected Output to Console:
+Starting Program...
+Parsing Command Line...
+Values found in Command Line:
+Daemon process enabled (T/F): true
+Configuration File found: cs3377dirmond.conf
+Parsing Configuration File...
+Values found in Configuration File:
+Verbose messages enabled (T/F): trueLog file found: cs3377dirmond.log
+Password found: mypassword
+Number of versions allowed: 10
+Watch Directory found: /home/013/l/la/lag170530/testdir
+Log file (cs3377dirmond.log) opened. All further information will be logged in the provided log file.
+
+
+
+Outputting the above and going back to console line means the daemon is successfully running in the background and an issue of the ps command will display the daemon process. 
+All changes made to the folder specified by Watchdir variable will be listed in the Log file and all backups that are created will be in a .versions sub1folder. 
+
